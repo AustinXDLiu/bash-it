@@ -15,7 +15,7 @@ STATUS_THEME_PROMPT_OK="${green}❯${reset_color}${normal}"
 
 function prompt_command() {
     local ret_status="$( [ $? -eq 0 ] && echo -e "$STATUS_THEME_PROMPT_OK" || echo -e "$STATUS_THEME_PROMPT_BAD")"
-    PS1="\n${black}\A ${bold_black}\u${black}@${bold_black}\h $(scm_prompt_info)\n${black}\w ${ret_status} "
+    PS1="\n${bold_black}\A ${bold_black}\u${bold_black}@${bold_black}\h $(scm_prompt_info)\n${bold_black}\w ${ret_status} "
 }
 
 safe_append_prompt_command prompt_command
